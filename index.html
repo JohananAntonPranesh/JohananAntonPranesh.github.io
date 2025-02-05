@@ -3,10 +3,139 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Portfolio</title>
+    <title>Quant Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        :root {
+            --primary-color: #0a192f;
+            --secondary-color: #112d4e;
+            --accent-color: #3f72af;
+            --background-color: #ffffff;
+            --text-color: #000000;
+            --font-family: 'Inter', sans-serif;
+        }
+
+        body {
+            font-family: var(--font-family);
+            background-color: var(--background-color);
+            color: var(--text-color);
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+
+        header {
+            background-color: var(--primary-color);
+            padding: 20px 0;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            color: var(--text-color);
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin: 0 20px;
+        }
+
+        nav ul li a {
+            color: var(--accent-color);
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        section {
+            padding: 60px 20px;
+        }
+
+        h2 {
+            color: var(--secondary-color);
+            font-size: 2rem;
+        }
+
+        .data-container {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .data-box {
+            background-color: var(--secondary-color);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+            width: 250px;
+            color: var(--background-color);
+        }
+
+        .data-box a {
+            color: var(--background-color);
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        footer {
+            background-color: var(--primary-color);
+            color: var(--background-color);
+            padding: 20px 0;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
 </head>
 <body>
-    <h1>Welcome to My Portfolio</h1>
-    <p>More updates coming soon!</p>
+    <header>
+        <h1>Quant Portfolio</h1>
+        <nav>
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#blog">Blog</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <section id="about">
+        <h2>About Me</h2>
+        <p>Quant researcher specializing in portfolio optimization, risk modeling, and algorithmic trading.</p>
+    </section>
+    
+    <section id="projects">
+        <h2>Projects</h2>
+        <div class="data-container">
+            <div class="data-box">
+                <h3><a href="https://github.com/yourusername/algorithmic-trading" target="_blank">Algorithmic Trading</a></h3>
+                <p>High-frequency trading strategies and backtesting models.</p>
+            </div>
+            <div class="data-box">
+                <h3><a href="https://github.com/yourusername/portfolio-optimization" target="_blank">Portfolio Optimization</a></h3>
+                <p>Factor-based asset allocation using reinforcement learning.</p>
+            </div>
+            <div class="data-box">
+                <h3><a href="https://github.com/yourusername/risk-management" target="_blank">Risk Management</a></h3>
+                <p>Monte Carlo simulations for downside protection.</p>
+            </div>
+        </div>
+    </section>
+    
+    <section id="blog">
+        <h2>Blog</h2>
+        <p>Articles and insights on quantitative finance, market models, and statistical arbitrage.</p>
+    </section>
+    
+    <section id="contact">
+        <h2>Contact</h2>
+        <p>Links to my GitHub, LinkedIn, and email.</p>
+    </section>
+    
+    <footer>
+        <p>&copy; 2025 Quant Portfolio. All rights reserved.</p>
+    </footer>
 </body>
 </html>
