@@ -1,0 +1,24 @@
+.bg-white {
+    position: relative; /* Ensure the text appears above the image */
+    overflow: hidden;
+}
+
+.background-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('data/Pranesh_Johanan.jpg');
+    background-size: cover; /* Make the image cover the entire div */
+    background-position: center;
+    filter: brightness(50%); /* Adjust the brightness to create the fade effect */
+    z-index: -1; /* Ensure the image stays in the background */
+}
+
+.text-center {
+    font-size: 2rem;
+    color: white;
+    position: relative;
+    z-index: 10; /* Ensure the text appears above the image */
+}
