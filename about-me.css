@@ -22,3 +22,26 @@
     position: relative;
     z-index: 10; /* Ensure the text appears above the image */
 }
+/* For the image */
+.image-container {
+    display: inline-block; /* Ensures the image's length adjusts based on the content width */
+    width: auto; /* Automatically adjusts the width */
+    height: auto; /* Adjusts the height accordingly */
+}
+/* Ensure the image container and text are aligned next to each other */
+.flex {
+    display: flex; /* Use flexbox for layout */
+    gap: 20px; /* Space between text and image */
+}
+
+/* Ensure the image container adjusts properly with content */
+.image-container {
+    display: inline-block;
+    width: 100px; /* Adjust the width of the image as per your requirement */
+    height: auto;
+}
+
+/* Flex item for text content */
+.flex-1 {
+    flex: 1; /* This will make the text area take as much space as needed */
+}

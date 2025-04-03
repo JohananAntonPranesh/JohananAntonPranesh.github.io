@@ -42,8 +42,9 @@
             <nav>
                 <ul class="flex space-x-6">
                     <li><a href="#about" class="hover:text-accent transition duration-300">About</a></li>
-                    <li><a href="#projects" class="hover:text-accent transition duration-300">Projects</a></li>
-                    <li><a href="#blog" class="hover:text-accent transition duration-300">Blog</a></li>
+                    <!-- <li><a href="all-projects.html" class="hover:text-accent transition duration-300">Projects</a></li> -->
+                    <a href="all-projects.html" class="hover:text-accent transition duration-300">Projects</a>
+                    <a href="https://www.linkedin.com/in/johanan-anton-pranesh/recent-activity/all/" class="hover:text-accent transition duration-300">Blog</a>
                     <li><a href="#contact" class="hover:text-accent transition duration-300">Contact</a></li>
                 </ul>
             </nav>
@@ -79,6 +80,11 @@
             <h2 class="text-4xl font-bold text-secondary mb-6">About Me</h2>
             <p class="text-lg text-gray-700">I am a graduate student in Financial Engineering at Lehigh University, with a strong mathematical background and hands-on industry experience in data science at a hedge fund. Over the past 1.5 years, I have worked on several corporate-sponsored projects, collaborating with firms such as Morgan Stanley and Hamilton Lane. I currently lead a multifactor investing team, where we are developing a framework for factor investing. I am passionate about leveraging alternative data and optimizing machine learning methods to drive insights in finance.</p>
         </div>
+        <div class="text-center mt-6">
+            <a href="about.html" class="px-6 py-3 bg-accent text-white font-bold rounded-lg shadow-lg hover:shadow-xl transition-transform transform hover:scale-105">
+                more
+            </a>
+        </div>
     </section>
     
     <!-- Collage Preview Section -->
@@ -87,40 +93,55 @@
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto px-6 opacity-0 animate-fadeInUp">
             <div class="bg-blue-900 p-6 rounded-lg shadow-lg hover:shadow-xl transition-transform transform hover:scale-105 relative h-80">
                 <img src="data/Pranesh_Johanan.jpg" alt="About Me" class="w-full h-full object-cover rounded-lg opacity-70">
-                <div class="absolute inset-0 flex items-center justify-center text-white font-bold text-lg">
-                    <p>About Me</p>
-                </div>
+                <a href="about.html" class="text-2xl">
+                    <div class="absolute inset-0 flex items-center justify-center text-white font-bold text-lg">
+                        <p>About Me</p>
+                    </div>
+                </a>
             </div>
-            <div class="bg-blue-900 p-6 rounded-lg shadow-lg hover:shadow-xl transition-transform transform hover:scale-105 relative h-80">
+            <!-- <div class="bg-blue-900 p-6 rounded-lg shadow-lg hover:shadow-xl transition-transform transform hover:scale-105 relative h-80">
                 <img src="data/output.png" alt="Projects" class="w-full h-full object-cover rounded-lg opacity-70">
                 <div class="absolute inset-0 flex items-center justify-center text-white font-bold text-lg">
                     <p>Corporate Sponsored Projects</p>
                 </div>
+            </div> -->
+            <div class="bg-blue-900 p-6 rounded-lg shadow-lg hover:shadow-xl transition-transform transform hover:scale-105 relative h-80">
+                <img src="data/output.webp" alt="Corporate Projects" class="w-full h-full object-cover rounded-lg opacity-70">
+                <a href="corporate_projects.html" class="text-2xl">
+                    <div class="absolute inset-0 flex items-center justify-center text-white font-bold text-lg">
+                        <p>Corporate Sponsored Projects</p>
+                    </div>
+                </a>
+            
             </div>
             <div class="bg-blue-900 p-6 rounded-lg shadow-lg hover:shadow-xl transition-transform transform hover:scale-105 relative h-80">
                 <img src="data/Analytics-Dashboard-Example.jpg" alt="Research" class="w-full h-full object-cover rounded-lg opacity-70">
-                <div class="absolute inset-0 flex items-center justify-center text-white font-bold text-lg">
-                    <p>Paper Under Research</p>
-                </div>
+                <a href="research.html" class="text-2xl">
+                    <div class="absolute inset-0 flex items-center justify-center text-white font-bold text-lg">
+                        <p>Paper Under Research</p>
+                    </div>
+                </a>
             </div>
             <div class="bg-blue-900 p-6 rounded-lg shadow-lg hover:shadow-xl transition-transform transform hover:scale-105 relative h-80">
                 <img src="data/Work-Experience.jpg" alt="About Me" class="w-full h-full object-cover rounded-lg opacity-70">
-                <div class="absolute inset-0 flex items-center justify-center text-white font-bold text-lg">
-                    <p>Professional Experience</p>
-                </div>
+                <a href="work.html" class="text-2xl">
+                    <div class="absolute inset-0 flex items-center justify-center text-white font-bold text-lg">
+                        <p>Professional Experience</p>
+                    </div>
+                </a>
             </div>
             <div class="bg-blue-900 p-6 rounded-lg shadow-lg hover:shadow-xl transition-transform transform hover:scale-105 relative h-80">
                 <img src="data/QR-and-DS_DS-2.png" alt="Personal projects" class="w-full h-full object-cover rounded-lg opacity-70">
-                <div class="absolute inset-0 flex items-center justify-center text-white font-bold text-lg">
-                    <p>Personal Projects</p>
-                </div>
+                <a href="personal-projects.html" class="text-2xl">
+                    <div class="absolute inset-0 flex items-center justify-center text-white font-bold text-lg">
+                        <p>Personal Projects</p>
+                    </div>
+                </a>
+            
             </div>
             <div class="bg-blue-900 p-6 rounded-lg shadow-lg hover:shadow-xl transition-transform transform hover:scale-105 relative h-80">
-                <!-- Link to LinkedIn Feed -->
-                <!-- <a href="https://www.linkedin.com/feed/" target="_blank" class="absolute inset-0 w-full h-full"> -->
                 <img src="data/1740243030506.jpeg" alt="Research" class="w-full h-full object-cover rounded-lg opacity-70">
                     <a href="https://www.linkedin.com/in/johanan-anton-pranesh/recent-activity/all/" target="_blank" class="absolute inset-0 w-full h-full">
-                        
                         <div class="absolute inset-0 flex items-center justify-center text-white font-bold text-lg z-10">
                             <p>Blog</p>
                         </div>
