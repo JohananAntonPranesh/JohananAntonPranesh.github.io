@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Skills | Johanan Anton Pranesh</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    .skill-tag {
+      @apply bg-accent text-white px-3 py-1 rounded-full text-sm font-semibold mr-2 mb-2 cursor-pointer;
+    }
+    .item-card {
+      @apply border rounded-lg p-4 shadow bg-white;
+    }
+  </style>
+</head>
+<body class="bg-gray-100 text-gray-800 font-sans">
+  <header class="bg-primary text-white py-4 px-6 shadow-md">
+    <h1 class="text-3xl font-bold">Skills & Experience</h1>
+  </header>
+
+  <main class="max-w-6xl mx-auto py-10 px-4">
+    <!-- Filter Buttons -->
+    <div id="skillButtons" class="mb-6 flex flex-wrap gap-2">
+      <!-- Buttons will be dynamically inserted here -->
+    </div>
+
+    <!-- Items List -->
+    <div id="itemList" class="grid gap-6">
+      <!-- List items dynamically inserted here -->
+    </div>
+  </main>
+
+  <script>
+    const data = [
+      {
+        type: 'Project',
+        title: 'Hybrid Approaches to Portfolio Optimization',
+        skills: ['Python', 'SVRG', 'Bandit Algorithms', 'Optimization'],
+        link: 'personal-projects.html',
+        description: 'Integrating Bandit Algorithms and SVRG for Portfolio Optimization.'
+      },
+      {
+        type: 'Work',
+        title: 'Quant Research Intern at Hedge Fund',
+        skills: ['Quant Research', 'Alternative Data', 'Backtesting', 'Python'],
+        link: 'corporate-projects.html',
+        description: 'Worked in the front office building research and predictive frameworks.'
+      },
+      {
+        type: 'Project',
+        title: 'MinIO Integration for Quant Infra',
+        skills: ['Go', 'Python', 'Data Management', 'Deployment'],
+        link: 'personal-projects.html',
+        description: 'Using MinIO to optimize data handling and cloud-native infra.'
+      },
+      {
+        type: 'Work',
+        title: 'AI Agent LLM Automation System',
+        skills: ['LLM', 'AI Agent', 'Automation', 'Python'],
+        link: 'corporate-projects.html',
+        description: 'Built an AI agent architecture for real-time quant tasks.'
+      },
+    ];
+
+    const allSkills = [...new Set(data.flatMap(item => item.skills))].sort();
+
+    const skillButtons = document.getElementById('skillButtons');
+    const itemList = document.getElementById('itemList');
+
+    let activeSkill = null;
+
+    function renderButtons() {
+      allSkills.forEach(skill => {
+        const btn = document.createElement('button');
+        btn.textContent = skill;
+        btn.className = 'skill-tag';
+        btn.onclick = () => {
+          if (activeSkill === skill) {
+            activeSkill = null;
+          } else {
+            activeSkill = skill;
+          }
+          renderItems();
+          highlightActive();
+        };
+        skillButtons.appendChild(btn);
+      });
+    }
+
+    function renderItems() {
+      itemList.innerHTML = '';
+      const filtered = activeSkill
+        ? data.filter(item => item.skills.includes(activeSkill))
+        : data;
+
+      filtered.forEach(item => {
+        const card = document.createElement('div');
+        card.className = 'item-card';
+        card.innerHTML = `
+          <h3 class="text-xl font-bold mb-1">${item.title}</h3>
+          <p class="text-sm text-gray-600 mb-2">${item.type} - <a href="${item.link}" class="text-blue-500 underline">View Source</a></p>
+          <p class="mb-3">${item.description}</p>
+          <div class="flex flex-wrap">
+            ${item.skills.map(skill => `<span class="bg-secondary text-white px-2 py-1 rounded-full text-xs mr-2 mb-2">${skill}</span>`).join('')}
+          </div>
+        `;
+        itemList.appendChild(card);
+      });
+    }
+
+    function highlightActive() {
+      [...skillButtons.children].forEach(btn => {
+        btn.classList.toggle('bg-secondary', btn.textContent === activeSkill);
+      });
+    }
+
+    renderButtons();
+    renderItems();
+  </script>
+
+  <footer class="text-center py-6 bg-primary text-white mt-10">
+    © 2025 Johanan Anton Pranesh. All rights reserved.
+  </footer>
+</body>
+</html>
